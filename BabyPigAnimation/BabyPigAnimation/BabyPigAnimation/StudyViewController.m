@@ -83,6 +83,8 @@
      */
     
     // 关键帧动画
+    
+    
    
     CAKeyframeAnimation *keyAnimation = [CAKeyframeAnimation animationWithKeyPath:@"position"];
     keyAnimation.values = [NSArray arrayWithObjects:
