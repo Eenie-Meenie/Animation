@@ -83,7 +83,7 @@
      */
     
     // 关键帧动画
-    /*
+   
     CAKeyframeAnimation *keyAnimation = [CAKeyframeAnimation animationWithKeyPath:@"position"];
     keyAnimation.values = [NSArray arrayWithObjects:
                            [NSValue valueWithCGPoint:CGPointMake(100, 100)],
@@ -105,7 +105,6 @@
                              [NSNumber numberWithFloat:1.0],nil];
     keyAnimation.duration = 5;
     [self.aView.layer addAnimation:keyAnimation forKey:nil];
-     */
 }
     
 
