@@ -7,11 +7,15 @@
 //
 
 #import "StudyViewController.h"
+#import "DrawView.h"
 
 @interface StudyViewController ()
 
 /** <#注释#> */
 @property (nonatomic, strong) UIView *aView;
+
+/** <#注释#> */
+@property (nonatomic, strong)  DrawView *drawView;
 
 @end
 
@@ -21,7 +25,56 @@
     [super viewDidLoad];
     
     self.view.backgroundColor = [UIColor whiteColor];
-    [self createrSubViews];
+//    [self createrSubViews]; // 动画
+//    [self graffitiViews];  // 涂鸦绘图
+      [self shapLayers]; // 原型进度条
+}
+
+- (void)shapLayers {
+    UIBezierPath *path = [UIBezierPath bezierPathWithOvalInRect:CGRectMake(375/2-100, 667/2-100, 200, 200)];
+//    UIBezierPath *path = [UIBezierPath bezierPathWithOvalInRect:CGRectMake(0, 0, 200, 200)];
+    CABasicAnimation *animation = [CABasicAnimation animationWithKeyPath:@"strokeEnd"];
+    animation.duration = 3.0;
+    animation.fromValue = @(0);
+    animation.toValue = @(1);
+    animation.repeatCount = 100;
+
+    
+    CAShapeLayer *layer = [CAShapeLayer layer];
+    layer.strokeColor = [UIColor redColor].CGColor;
+    layer.fillColor = [UIColor clearColor].CGColor;//图形填充色
+    layer.path = path.CGPath;
+    layer.lineWidth = 25.0;
+    //圆的起始位置，默认为0
+    layer.strokeStart = 0;
+    //圆的结束位置，默认为1，如果值为0.75，则显示3/4的圆
+    layer.strokeEnd = 1;
+    [layer addAnimation:animation forKey:@"strokeEndAnimation"];
+    
+    [self.view.layer addSublayer:layer];
+}
+
+/** 涂鸦绘图 */
+- (void)graffitiViews {
+    
+    DrawView *drawView = [[DrawView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, 400)];
+    drawView.backgroundColor = [UIColor cyanColor];
+    [self.view addSubview:drawView];
+    self.drawView = drawView;
+    
+    
+    UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
+    button.frame = CGRectMake(100, 500, 200, 40);
+    button.backgroundColor = [UIColor redColor];
+    [button setTitle:@"撤销" forState:UIControlStateNormal];
+    [button addTarget:self action:@selector(undo:) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:button];
+}
+
+/** 撤销上一笔绘制 */
+- (void)undo:(UIButton *)sender {
+    [self.drawView.lineArray removeLastObject];
+    [self.drawView setNeedsDisplay];
 }
 
 - (void)createrSubViews {
@@ -107,6 +160,9 @@
                              [NSNumber numberWithFloat:1.0],nil];
     keyAnimation.duration = 5;
     [self.aView.layer addAnimation:keyAnimation forKey:nil];
+    
+    
+    
 }
     
 
@@ -116,6 +172,7 @@
     
     
 }
+
 
 /*
 #pragma mark - Navigation
