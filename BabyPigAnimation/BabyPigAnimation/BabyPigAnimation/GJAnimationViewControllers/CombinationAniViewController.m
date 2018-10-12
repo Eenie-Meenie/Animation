@@ -109,11 +109,11 @@
 -(void)makeDingdingAnimation{
     UILabel *homeLabel = [self createHomeButtonView];
     
-    DWBubbleMenuButton *upMenuView = [[DWBubbleMenuButton alloc] initWithFrame:CGRectMake(self.view.frame.size.width - homeLabel.frame.size.width - 20.f,
-                                                                                          self.view.frame.size.height - homeLabel.frame.size.height - 20.f,
+    DWBubbleMenuButton *upMenuView = [[DWBubbleMenuButton alloc] initWithFrame:CGRectMake(self.view.frame.size.width - homeLabel.frame.size.width - 80.f,
+                                                                                          100,
                                                                                           homeLabel.frame.size.width,
                                                                                           homeLabel.frame.size.height)
-                                                            expansionDirection:DirectionUp];
+                                                            expansionDirection:DirectionDown];
     upMenuView.homeButtonView = homeLabel;
     [upMenuView addButtons:[self createDemoButtonArray]];
     
@@ -220,7 +220,7 @@
     animLayer.path = path.CGPath;
     animLayer.lineWidth = 2.f;
     animLayer.strokeColor = [UIColor blackColor].CGColor;
-    animLayer.fillColor = [UIColor clearColor].CGColor;
+    animLayer.fillColor = [UIColor redColor].CGColor;
     animLayer.strokeStart = 0;
     animLayer.strokeEnd = 1.;
     [self.view.layer addSublayer:animLayer];

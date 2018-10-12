@@ -10,6 +10,7 @@
 
 #import "AppDelegate.h"
 #import "ViewController.h"
+#import "StudyViewController.h"
 
 @interface AppDelegate ()
 
@@ -21,8 +22,24 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     
+
+    
     UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:[[ViewController alloc] init]];
-    self.window.rootViewController = nav;
+    
+
+    StudyViewController *studyVC1 = [[StudyViewController alloc] init];
+    UINavigationController *naVC1 = [[UINavigationController alloc] initWithRootViewController:studyVC1];
+    
+    studyVC1.title = @"动画学习";
+//    UINavigationController *naVC1 = [[UINavigationController alloc] initWithRootViewController:[StudyViewController alloc] init];
+    
+    UITabBarController *tabBarVC = [[UITabBarController alloc] init];
+    
+    
+    
+    tabBarVC.viewControllers = @[nav,naVC1];
+    
+    self.window.rootViewController = tabBarVC;
     [self.window makeKeyAndVisible];
     
     return YES;

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		535008C321703B2F00AB5A6B /* StudyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 535008C221703B2F00AB5A6B /* StudyViewController.m */; };
 		E1B8448F2069EC3A007D4F1B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E1B8448E2069EC3A007D4F1B /* AppDelegate.m */; };
 		E1B844922069EC3A007D4F1B /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E1B844912069EC3A007D4F1B /* ViewController.m */; };
 		E1B844952069EC3A007D4F1B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E1B844932069EC3A007D4F1B /* Main.storyboard */; };
@@ -50,6 +51,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		535008C121703B2F00AB5A6B /* StudyViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StudyViewController.h; sourceTree = "<group>"; };
+		535008C221703B2F00AB5A6B /* StudyViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StudyViewController.m; sourceTree = "<group>"; };
 		E1B8448A2069EC3A007D4F1B /* BabyPigAnimation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BabyPigAnimation.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E1B8448D2069EC3A007D4F1B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		E1B8448E2069EC3A007D4F1B /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -152,6 +155,8 @@
 				E1B8448E2069EC3A007D4F1B /* AppDelegate.m */,
 				E1B844902069EC3A007D4F1B /* ViewController.h */,
 				E1B844912069EC3A007D4F1B /* ViewController.m */,
+				535008C121703B2F00AB5A6B /* StudyViewController.h */,
+				535008C221703B2F00AB5A6B /* StudyViewController.m */,
 				E1B844932069EC3A007D4F1B /* Main.storyboard */,
 				E1B844962069EC3A007D4F1B /* Assets.xcassets */,
 				E1B844982069EC3A007D4F1B /* LaunchScreen.storyboard */,
@@ -385,6 +390,7 @@
 				E1B844DF206A34A6007D4F1B /* DCPathCenterButton.m in Sources */,
 				E1B844922069EC3A007D4F1B /* ViewController.m in Sources */,
 				E1B844CB206A230B007D4F1B /* GroupAnimationViewController.m in Sources */,
+				535008C321703B2F00AB5A6B /* StudyViewController.m in Sources */,
 				E1B844C5206A04ED007D4F1B /* BaseViewController.m in Sources */,
 				E1B844E1206A34A6007D4F1B /* DWBubbleMenuButton.m in Sources */,
 				E1B8449D2069EC3A007D4F1B /* main.m in Sources */,
