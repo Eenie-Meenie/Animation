@@ -7,8 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3A91FEF0E8F56C961894E1CC /* libPods-BabyPigAnimation.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2EAE9439A60DF1E2688151F1 /* libPods-BabyPigAnimation.a */; };
 		535008C321703B2F00AB5A6B /* StudyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 535008C221703B2F00AB5A6B /* StudyViewController.m */; };
 		535008C621707C7900AB5A6B /* DrawView.m in Sources */ = {isa = PBXBuildFile; fileRef = 535008C521707C7900AB5A6B /* DrawView.m */; };
+		53A175ED21771D9A0058CF7D /* ImagePickerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 53A175EC21771D9A0058CF7D /* ImagePickerController.m */; };
 		E1B8448F2069EC3A007D4F1B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E1B8448E2069EC3A007D4F1B /* AppDelegate.m */; };
 		E1B844922069EC3A007D4F1B /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E1B844912069EC3A007D4F1B /* ViewController.m */; };
 		E1B844952069EC3A007D4F1B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E1B844932069EC3A007D4F1B /* Main.storyboard */; };
@@ -52,10 +54,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2EAE9439A60DF1E2688151F1 /* libPods-BabyPigAnimation.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-BabyPigAnimation.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3F79FAED9775952124DCF167 /* Pods-BabyPigAnimation.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BabyPigAnimation.release.xcconfig"; path = "Pods/Target Support Files/Pods-BabyPigAnimation/Pods-BabyPigAnimation.release.xcconfig"; sourceTree = "<group>"; };
 		535008C121703B2F00AB5A6B /* StudyViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StudyViewController.h; sourceTree = "<group>"; };
 		535008C221703B2F00AB5A6B /* StudyViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StudyViewController.m; sourceTree = "<group>"; };
 		535008C421707C7900AB5A6B /* DrawView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DrawView.h; sourceTree = "<group>"; };
 		535008C521707C7900AB5A6B /* DrawView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DrawView.m; sourceTree = "<group>"; };
+		53A175EB21771D9A0058CF7D /* ImagePickerController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ImagePickerController.h; sourceTree = "<group>"; };
+		53A175EC21771D9A0058CF7D /* ImagePickerController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ImagePickerController.m; sourceTree = "<group>"; };
+		A77C084AF259A070978782AC /* Pods-BabyPigAnimation.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BabyPigAnimation.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BabyPigAnimation/Pods-BabyPigAnimation.debug.xcconfig"; sourceTree = "<group>"; };
 		E1B8448A2069EC3A007D4F1B /* BabyPigAnimation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BabyPigAnimation.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E1B8448D2069EC3A007D4F1B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		E1B8448E2069EC3A007D4F1B /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -106,6 +113,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3A91FEF0E8F56C961894E1CC /* libPods-BabyPigAnimation.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -126,6 +134,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8E7C831692D7AB64BE736F98 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2EAE9439A60DF1E2688151F1 /* libPods-BabyPigAnimation.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D30D8AA7E741C5A7B834C89F /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				A77C084AF259A070978782AC /* Pods-BabyPigAnimation.debug.xcconfig */,
+				3F79FAED9775952124DCF167 /* Pods-BabyPigAnimation.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		E1B844812069EC3A007D4F1B = {
 			isa = PBXGroup;
 			children = (
@@ -133,6 +158,8 @@
 				E1B844A52069EC3A007D4F1B /* BabyPigAnimationTests */,
 				E1B844B02069EC3A007D4F1B /* BabyPigAnimationUITests */,
 				E1B8448B2069EC3A007D4F1B /* Products */,
+				D30D8AA7E741C5A7B834C89F /* Pods */,
+				8E7C831692D7AB64BE736F98 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -160,6 +187,8 @@
 				E1B844912069EC3A007D4F1B /* ViewController.m */,
 				535008C121703B2F00AB5A6B /* StudyViewController.h */,
 				535008C221703B2F00AB5A6B /* StudyViewController.m */,
+				53A175EB21771D9A0058CF7D /* ImagePickerController.h */,
+				53A175EC21771D9A0058CF7D /* ImagePickerController.m */,
 				535008C421707C7900AB5A6B /* DrawView.h */,
 				535008C521707C7900AB5A6B /* DrawView.m */,
 				E1B844932069EC3A007D4F1B /* Main.storyboard */,
@@ -258,9 +287,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = E1B844B62069EC3A007D4F1B /* Build configuration list for PBXNativeTarget "BabyPigAnimation" */;
 			buildPhases = (
+				5A1A24B92AD7C9216BB7D718 /* [CP] Check Pods Manifest.lock */,
 				E1B844862069EC3A007D4F1B /* Sources */,
 				E1B844872069EC3A007D4F1B /* Frameworks */,
 				E1B844882069EC3A007D4F1B /* Resources */,
+				5C8A0CB3A2294E8B21AD7C3A /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -382,6 +413,53 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		5A1A24B92AD7C9216BB7D718 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-BabyPigAnimation-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5C8A0CB3A2294E8B21AD7C3A /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-BabyPigAnimation/Pods-BabyPigAnimation-resources.sh",
+				"${PODS_ROOT}/TZImagePickerController/TZImagePickerController/TZImagePickerController/TZImagePickerController.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/TZImagePickerController.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BabyPigAnimation/Pods-BabyPigAnimation-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		E1B844862069EC3A007D4F1B /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -390,6 +468,7 @@
 				E1B844E0206A34A6007D4F1B /* DCPathItemButton.m in Sources */,
 				E1B844DE206A34A6007D4F1B /* DCPathButton.m in Sources */,
 				E1B844CE206A2B45007D4F1B /* TransitionAnimationViewController.m in Sources */,
+				53A175ED21771D9A0058CF7D /* ImagePickerController.m in Sources */,
 				E1B844E9206A3711007D4F1B /* CombinationAniViewController.m in Sources */,
 				E1B844E3206A34A6007D4F1B /* MCFireworksView.m in Sources */,
 				E1B844DF206A34A6007D4F1B /* DCPathCenterButton.m in Sources */,
@@ -564,6 +643,7 @@
 		};
 		E1B844B72069EC3A007D4F1B /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A77C084AF259A070978782AC /* Pods-BabyPigAnimation.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -579,6 +659,7 @@
 		};
 		E1B844B82069EC3A007D4F1B /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3F79FAED9775952124DCF167 /* Pods-BabyPigAnimation.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

@@ -33,7 +33,7 @@
     [self createUI];
     [self configData];
     
-    self.tabBarItem.title = @"动画";
+//     self.tabBarController.tabBarItem.title = @"动画";
 }
 
 -(void)createUI{

@@ -11,6 +11,7 @@
 #import "AppDelegate.h"
 #import "ViewController.h"
 #import "StudyViewController.h"
+#import "ImagePickerController.h"
 
 @interface AppDelegate ()
 
@@ -21,10 +22,11 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
-    
 
+    ViewController *vc = [[ViewController alloc] init];
     
-    UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:[[ViewController alloc] init]];
+    UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:vc];
+    vc.title = @"动画";
     
 
     StudyViewController *studyVC1 = [[StudyViewController alloc] init];
@@ -33,11 +35,14 @@
     studyVC1.title = @"动画学习";
 //    UINavigationController *naVC1 = [[UINavigationController alloc] initWithRootViewController:[StudyViewController alloc] init];
     
+    
+    ImagePickerController *imagePickVC = [[ImagePickerController alloc] init];
+    UINavigationController *navc2 = [[UINavigationController alloc] initWithRootViewController:imagePickVC];
+    imagePickVC.title = @"相册选择";
+    
+    
     UITabBarController *tabBarVC = [[UITabBarController alloc] init];
-    
-    
-    
-    tabBarVC.viewControllers = @[nav,naVC1];
+    tabBarVC.viewControllers = @[nav,naVC1, navc2];
     
     self.window.rootViewController = tabBarVC;
     [self.window makeKeyAndVisible];
